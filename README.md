@@ -4,7 +4,7 @@ Acknowledgements to Luc Perkins.
 
 See https://determinate.systems/posts/nix-direnv
 
-Note: this is for my own personal use.
+Note: this is for my own personal use but feel free to steal from it.
 
 ## Usage
 
