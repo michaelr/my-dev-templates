@@ -14,6 +14,10 @@
           path = ./elixir;
           description = "Elixir development environment";
         };
+        node = {
+          path = ./node;
+          description = "Node.js development environment";
+        };
 
       };
     } // flake-utils.lib.eachDefaultSystem (system:
