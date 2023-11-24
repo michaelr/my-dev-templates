@@ -18,6 +18,10 @@
           path = ./node;
           description = "Node.js development environment";
         };
+        phoenix = {
+          path = ./phoenix;
+          description = "Elixir/Phoenix development environment";
+        };
 
       };
     } // flake-utils.lib.eachDefaultSystem (system:
