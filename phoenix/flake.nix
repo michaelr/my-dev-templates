@@ -45,13 +45,16 @@
 
         yes 2>/dev/null | ${pkgs.elixir}/bin/mix phx.new . --live
 
-        # TODO: using a patch is probably a better way to do this
-        # TODO: also patch test.exs
-        # setup dev config to use $PGDATA to connect to the database
+        # setup dev and test config to use $PGDATA to connect to the database
         ${pkgs.sd}/bin/sd -f m \
             'username: "postgres",\n\s+password: "postgres",\n\s+hostname: "localhost",' \
             'socket_dir: System.get_env("PGDATA"),' \
             config/dev.exs
+
+        ${pkgs.sd}/bin/sd -f m \
+            'username: "postgres",\n\s+password: "postgres",\n\s+hostname: "localhost",' \
+            'socket_dir: System.get_env("PGDATA"),' \
+            config/test.exs
 
         db_up # start postgres
 
